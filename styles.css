@@ -1,3 +1,4 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -6,19 +7,22 @@ body {
     color: #333;
 }
 
+/* Header */
 header {
     background-color: #222;
     color: white;
-    padding: 20px;
     text-align: center;
-    font-size: 1.5em;
+    padding: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2em;
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
-    text-align: center;
-    background-color: #333;
 }
 
 nav ul li {
@@ -29,69 +33,69 @@ nav ul li {
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
     font-size: 1.2em;
 }
 
-section {
-    padding: 40px;
-    margin: 20px auto;
-    max-width: 900px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+/* Team Section */
+#team {
+    text-align: center;
+    padding: 40px 20px;
 }
 
-h2 {
-    text-align: center;
+#team h2 {
+    font-size: 2em;
     color: #222;
 }
 
-.team-member {
-    text-align: center;
-    margin: 20px;
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
-.team-member img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+.team-member {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover {
+    transform: scale(1.05);
 }
 
 .team-member h3 {
-    margin-top: 10px;
-    color: #444;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 500px;
-    margin: auto;
-}
-
-label, input, textarea, button {
     margin: 10px 0;
+    font-size: 1.5em;
+    color: #222;
 }
 
-button {
-    background-color: #222;
-    color: white;
-    padding: 10px;
-    border: none;
-    cursor: pointer;
-    font-size: 1.1em;
-    border-radius: 5px;
+.team-member p {
+    margin: 0;
+    color: #555;
 }
 
-button:hover {
-    background-color: #444;
-}
-
-footer {
+/* Tribute Section */
+#tribute {
     text-align: center;
+    margin: 40px auto;
+    max-width: 700px;
     padding: 20px;
+    background: #ffecec;
+    border-left: 6px solid #ff5a5a;
+    border-radius: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Footer */
+footer {
     background-color: #222;
     color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 30px;
 }
