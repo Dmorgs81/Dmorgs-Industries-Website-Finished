@@ -1,119 +1,140 @@
-* {
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
-body {
-    background-color: #f4f4f9;
-    color: #333;
-    line-height: 1.6;
-    padding-top: 20px;
+    background-color: #f4f4f4;
 }
 
 header {
     background-color: #333;
     color: #fff;
-    padding: 20px 0;
     text-align: center;
+    padding: 20px 0;
 }
 
 h1 {
-    font-size: 2.5rem;
-    letter-spacing: 1px;
+    margin: 0;
 }
 
+/* Section Styles */
 section {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
-    font-weight: bold;
-}
-
-p {
-    font-size: 1.1rem;
-    color: #666;
-    max-width: 800px;
-    margin: 20px auto;
-    text-align: left;
+    padding: 40px 0;
 }
 
 .container {
     width: 80%;
     margin: 0 auto;
+    text-align: center;
 }
 
+/* About Section */
 #about p {
-    text-align: center; /* Fixing text centering issue in About section */
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
 }
 
+/* Team Section */
 #team {
-    background-color: #ffffff;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    padding: 40px;
+    padding: 40px 0;
+    background-color: #fff;
 }
 
 .team-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 20px;
+    justify-items: center;
 }
 
 .team-member {
-    background-color: #e9ecef;
+    background-color: #fff;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
     text-align: center;
 }
 
 .team-member img {
-    width: 150px;
-    height: 150px;
+    width: 100%;
+    height: auto;
+    max-width: 150px; /* Set max width */
+    max-height: 150px; /* Set max height */
     border-radius: 50%;
-    margin-bottom: 15px;
-    object-fit: cover;
+    object-fit: cover; /* Ensures image is contained within the circle */
+    margin-bottom: 10px;
 }
 
 .team-member h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #333;
+    font-size: 1.2em;
+    margin: 10px 0;
 }
 
 .team-member p {
-    color: #666;
-    font-size: 1rem;
+    font-size: 1em;
+    color: #555;
 }
 
+/* Tribute Section */
 #tribute {
-    background-color: #f7f7f7;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    margin-top: 40px;
+    background-color: #e3e3e3;
+    padding: 40px 0;
+}
+
+.tribute-box {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    margin: 0 auto;
 }
 
 .tribute-box h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px;
-    color: #333;
+    font-size: 1.8em;
+    margin-bottom: 15px;
 }
 
+.tribute-box p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Footer Styles */
 footer {
     background-color: #333;
     color: #fff;
-    padding: 10px;
     text-align: center;
-    margin-top: 40px;
+    padding: 10px 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-footer p {
-    font-size: 0.9rem;
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .team-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .team-member {
+        width: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .team-member {
+        width: 100%;
+    }
 }
